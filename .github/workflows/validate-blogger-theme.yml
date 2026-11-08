@@ -4,10 +4,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - "theme-3351920114810663100 (2) (15).xml"
-      - "sites/abdulqawiqaid.org/blogger-theme/**"
-      - ".github/workflows/validate-blogger-theme.yml"
   workflow_dispatch:
 
 permissions:
@@ -42,7 +38,7 @@ jobs:
           actual_size = len(data)
           actual_sha256 = hashlib.sha256(data).hexdigest()
           git_blob = hashlib.sha1(
-              b"blob " + str(actual_size).encode("ascii") + b"\0" + data
+              b"blob " + str(actual_size).encode("ascii") + b"\\0" + data
           ).hexdigest()
 
           expected = {
