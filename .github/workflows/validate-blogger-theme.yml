@@ -4,10 +4,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - "theme-3351920114810663100 (2) (15).xml"
-      - "sites/abdulqawiqaid.org/blogger-theme/**"
-      - ".github/workflows/validate-blogger-theme.yml"
   workflow_dispatch:
 
 permissions:
