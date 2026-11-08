@@ -38,7 +38,7 @@ jobs:
           actual_size = len(data)
           actual_sha256 = hashlib.sha256(data).hexdigest()
           git_blob = hashlib.sha1(
-              b"blob " + str(actual_size).encode("ascii") + b"\\0" + data
+              b"blob " + str(actual_size).encode("ascii") + b"\0" + data
           ).hexdigest()
 
           expected = {
